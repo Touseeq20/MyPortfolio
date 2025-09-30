@@ -163,14 +163,9 @@ If you find this portfolio helpful or inspiring, please give it a ⭐!
 
 ---
 
-🚀 Built with ❤️ by **Muhammad Touseeq**
-![Visit](https://img.shields.io/badge/Visit-My_Portfolio-8B5CF6?style=for-the-badge\&logo=vercel)
+🚀 Built with ❤️ by **Muhammad Touseeq**  
+
+[![Visit](https://img.shields.io/badge/Visit-My_Portfolio-8B5CF6?style=for-the-badge\&logo=vercel)](https://touseeq20.github.io/MyPortfolio/) 
 
 ---
 
-```
-
----
-
-
-```
