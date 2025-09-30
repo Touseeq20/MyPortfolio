@@ -171,8 +171,5 @@ If you find this portfolio helpful or inspiring, please give it a ⭐!
 
 ---
 
-⚡ Pro tip: Save this file as `README.md` inside your **portfolio repo** (root).  
-GitHub will automatically show this beautifully formatted readme on your repository page.  
 
-Do you also want me to make this README **include your profile picture in a round style** at the top (like a banner avatar)?
 ```
