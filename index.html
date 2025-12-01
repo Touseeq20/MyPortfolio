@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Muhammad Touseeq — AI Engineer | Machine Learning | Computer Vision" />
+  <meta name="description" content="Muhammad Touseeq — AI Engineer | Machine Learning | Computer Vision | React Native Developer" />
   <title>Muhammad Touseeq — AI Portfolio</title>
   
   <!-- Fonts & Icons -->
@@ -343,6 +343,22 @@
       line-height: 1.8;
     }
     
+    .contact-info {
+      margin: 1.5rem 0;
+    }
+    
+    .contact-info p {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.7rem;
+    }
+    
+    .contact-info i {
+      color: var(--primary);
+      width: 20px;
+    }
+    
     .about-stats {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -496,11 +512,18 @@
       font-size: 1.3rem;
     }
     
-    .timeline-content .date {
+    .timeline-content .company {
       color: var(--secondary);
       font-size: 0.9rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
       font-weight: 600;
+    }
+    
+    .timeline-content .date {
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
     }
     
     .timeline-content p {
@@ -508,9 +531,51 @@
       line-height: 1.6;
     }
 
+    /* Education */
+    .education {
+      background: var(--dark-light);
+    }
+    
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .education-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .education-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .education-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    
+    .education-card .institution {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .education-card .year {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
     /* Projects */
     .projects {
-      background: var(--dark-light);
+      background: var(--dark);
     }
     
     .projects-grid {
@@ -606,7 +671,7 @@
 
     /* Skills */
     .skills {
-      background: var(--dark);
+      background: var(--dark-light);
     }
     
     .skills-container {
@@ -674,7 +739,7 @@
 
     /* Contact */
     .contact {
-      background: var(--dark-light);
+      background: var(--dark);
       text-align: center;
     }
     
@@ -721,7 +786,7 @@
 
     /* Footer */
     .footer {
-      background: var(--dark);
+      background: var(--dark-light);
       padding: 3rem 0 2rem;
       text-align: center;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -988,7 +1053,8 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#journey">Journey</a></li>
+        <li><a href="#journey">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1009,8 +1075,7 @@
         <span class="cursor">|</span>
       </div>
       <p class="hero-desc">
-        AI/ML Engineer specializing in Computer Vision, NLP, and Mobile Development. 
-        I build intelligent systems that solve real-world problems and create impactful solutions.
+        AI-focused Computer Science graduate with expertise in developing and deploying machine learning models for Computer Vision and NLP applications. Proficient in React Native mobile development and advanced AI techniques including RAG, Object Detection, and Segmentation. Experienced in full project lifecycle from data annotation to production deployment in agile team environments.
       </p>
       <div class="cta">
         <a href="#projects" class="btn btn-primary">
@@ -1034,29 +1099,30 @@
       </div>
       <div class="about-grid">
         <div class="about-text fade-in">
-          <h3>AI Engineer & Developer</h3>
+          <h3>AI Engineer & Full-Stack Developer</h3>
           <p>
-            I'm <strong>Muhammad Touseeq</strong>, a passionate <strong>AI Engineer</strong> with expertise in 
-            Machine Learning, Computer Vision, and Natural Language Processing. I specialize in building 
-            end-to-end AI solutions from data preprocessing to model deployment.
+            I'm <strong>Muhammad Touseeq</strong>, a passionate <strong>AI Engineer</strong> and <strong>Computer Science graduate</strong> specializing in Artificial Intelligence. With hands-on experience in developing and deploying machine learning models for real-world applications, I bridge the gap between cutting-edge AI research and practical implementation.
           </p>
           <p>
-            Currently pursuing my <strong>BS in Computer Science with AI Specialization</strong> at PMAS Arid Agriculture University, 
-            I'm constantly exploring new technologies and methodologies to push the boundaries of what's possible with AI.
+            My expertise spans <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong>, and <strong>React Native mobile development</strong>. I've worked on projects ranging from healthcare diagnostics to intelligent mobile applications, always focusing on creating impactful solutions that solve real-world problems.
           </p>
-          <p>
-            When I'm not coding, I enjoy researching the latest advancements in AI, contributing to open-source projects, 
-            and mentoring aspiring developers in the AI community.
-          </p>
+          
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Muslim Town, Rawalpindi, Pakistan</p>
+            <p><i class="fas fa-envelope"></i> mtouseeq20@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +92 330 1540904</p>
+            <p><i class="fab fa-linkedin"></i> www.linkedin.com/in/muhammad-touseeq-ai</p>
+            <p><i class="fab fa-github"></i> https://github.com/Touseeq20</p>
+          </div>
           
           <div class="about-stats">
             <div class="stat">
-              <div class="stat-number">20+</div>
+              <div class="stat-number">10+</div>
               <div class="stat-text">Projects Completed</div>
             </div>
             <div class="stat">
-              <div class="stat-number">3+</div>
-              <div class="stat-text">Years Experience</div>
+              <div class="stat-number">3</div>
+              <div class="stat-text">Professional Roles</div>
             </div>
             <div class="stat">
               <div class="stat-number">15+</div>
@@ -1064,44 +1130,87 @@
             </div>
             <div class="stat">
               <div class="stat-number">5+</div>
-              <div class="stat-text">AI Models</div>
+              <div class="stat-text">AI Models Deployed</div>
             </div>
           </div>
         </div>
         <div class="about-image fade-in">
-<img src="profile.jpg" alt="Muhammad Touseeq">
+          <img src="profile.jpg" alt="Muhammad Touseeq">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Journey Section -->
+  <!-- Experience Section -->
   <section class="journey section" id="journey">
     <div class="container">
       <div class="section-title">
-        <h2>My Journey</h2>
+        <h2>Professional Experience</h2>
       </div>
       <div class="timeline">
+        <!-- Experience 1 -->
         <div class="timeline-item fade-in">
           <div class="timeline-content">
-            <h3>Junior AI Engineer (Remote Intern)</h3>
-            <div class="date">Jun 2025 – Sept 2025</div>
-            <p>Worked on developing and optimizing computer vision models for healthcare applications at CareCloud-MTBC.</p>
+            <h3>Junior Support Officer</h3>
+            <div class="company">NTC Headquarters Islamabad (Data Center)</div>
+            <div class="date">Current</div>
+            <p>Developed and maintained the Ticketing/Complaint Management Portal, integrated role-based access control, deployed on cPanel, and implemented a support chatbot to automate user queries and improve service efficiency.</p>
+            <p><strong>Portal:</strong> https://dc-support.ntc.org.pk</p>
           </div>
         </div>
+        
+        <!-- Experience 2 -->
         <div class="timeline-item fade-in">
           <div class="timeline-content">
-            <h3>Machine Learning Intern (Remote)</h3>
+            <h3>Junior AI Engineer</h3>
+            <div class="company">CareCloud-MTBC</div>
+            <div class="date">Recent</div>
+            <p>Worked on research and development of computer vision models for healthcare applications, optimizing AI pipelines and improving diagnostic accuracy through advanced machine learning techniques.</p>
+          </div>
+        </div>
+        
+        <!-- Experience 3 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-content">
+            <h3>Machine Learning Intern</h3>
+            <div class="company">CodSoft</div>
             <div class="date">May 2024 – Jun 2024</div>
-            <p>Implemented various ML models for predictive analytics and classification tasks at CodSoft.</p>
+            <p>Implemented and optimized ML models for predictive analytics and classification tasks, contributing to data-driven insights and model performance improvements in various applications.</p>
           </div>
         </div>
-        <div class="timeline-item fade-in">
-          <div class="timeline-content">
-            <h3>BS Computer Science (AI Specialization)</h3>
-            <div class="date">2021 – 2025</div>
-            <p>Pursuing degree at PMAS Arid Agriculture University with focus on AI, ML, and Data Science.</p>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-title">
+        <h2>Education</h2>
+      </div>
+      <div class="education-grid">
+        <!-- Education 1 -->
+        <div class="education-card fade-in">
+          <h3>BS Computer Science – AI Specialization</h3>
+          <div class="institution">PMAS Arid Agriculture University, Rawalpindi</div>
+          <div class="year">2021 – 2025</div>
+          <p>Specialized in Artificial Intelligence with focus on Machine Learning, Computer Vision, and Natural Language Processing. Completed advanced coursework in AI algorithms, neural networks, and data science.</p>
+        </div>
+        
+        <!-- Education 2 -->
+        <div class="education-card fade-in">
+          <h3>F.Sc. Pre-Engineering</h3>
+          <div class="institution">Steps College, Rawalpindi</div>
+          <div class="year">2019 – 2021</div>
+          <p>Completed intermediate education with focus on Physics, Chemistry, and Mathematics, laying foundation for engineering and technology studies.</p>
+        </div>
+        
+        <!-- Education 3 -->
+        <div class="education-card fade-in">
+          <h3>Matriculation</h3>
+          <div class="institution">Aisha Lasani Model High School, Rawalpindi</div>
+          <div class="year">2019</div>
+          <p>Completed secondary education with distinction in science subjects.</p>
         </div>
       </div>
     </div>
@@ -1117,16 +1226,16 @@
         <!-- Project 1 -->
         <div class="project-card fade-in">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Football Match Summary Generator">
+            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Football Match Summary Generator">
           </div>
           <div class="project-content">
             <h3>Football Match Summary Generator</h3>
-            <p>AI-powered system that detects goals, fouls, and identifies players to generate match highlights and summaries with player recognition.</p>
+            <p>AI-powered React Native mobile app that detects goals, fouls, and identifies players using facial and jersey number recognition. Automatically generates match highlights and organizes tournament history.</p>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">YOLO</span>
+              <span class="tag">React Native</span>
               <span class="tag">Computer Vision</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">AI</span>
             </div>
             <div class="project-links">
               <a href="#" class="project-link">
@@ -1142,16 +1251,17 @@
         <!-- Project 2 -->
         <div class="project-card fade-in">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="RAG Document Chatbot">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="RAG Document Chatbot">
           </div>
           <div class="project-content">
             <h3>RAG Document Chatbot</h3>
-            <p>Retrieval-Augmented Generation chatbot that answers questions based on document content using FAISS and advanced LLMs with contextual understanding.</p>
+            <p>AI-powered chatbot using Streamlit, FAISS, and HuggingFace for document retrieval, integrated with OpenAI & DeepSeek APIs. Supports multi-document uploads and real-time Q&A with contextual understanding.</p>
             <div class="project-tags">
               <span class="tag">Python</span>
-              <span class="tag">LangChain</span>
+              <span class="tag">RAG</span>
               <span class="tag">FAISS</span>
               <span class="tag">Streamlit</span>
+              <span class="tag">NLP</span>
             </div>
             <div class="project-links">
               <a href="#" class="project-link">
@@ -1167,15 +1277,15 @@
         <!-- Project 3 -->
         <div class="project-card fade-in">
           <div class="project-image">
-            <img src="https://yt3.googleusercontent.com/AVuP0boavhrfLCL1oQUTtnbq4EODJ-iBdzAcX6bUE6rAUWKNPRPn9aKT2XL1URo0NakZI6fLBw=s900-c-k-c0x00ffffff-no-rj" alt="Daily Quran Ayat Reciter">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Daily Quran Ayat Reciter">
           </div>
           <div class="project-content">
             <h3>Daily Quran Ayat Reciter</h3>
-            <p>React Native app with AI mood prediction that provides personalized Quranic verses with notifications and emotional analysis.</p>
+            <p>A standalone React Native SQLite app that delivers personalized Quranic verses daily using AI mood prediction (Decision Tree algorithm). Maintains user history, tracks emotional patterns, and sends daily notifications.</p>
             <div class="project-tags">
               <span class="tag">React Native</span>
               <span class="tag">SQLite</span>
-              <span class="tag">AI</span>
+              <span class="tag">Decision Tree</span>
               <span class="tag">Mobile</span>
             </div>
             <div class="project-links">
@@ -1192,16 +1302,66 @@
         <!-- Project 4 -->
         <div class="project-card fade-in">
           <div class="project-image">
-            <img src="https://learn.g2.com/hubfs/G2CM_FI454_Learn_Article_Images_%5BFacial_recognition%5D_V1a-1.png" alt="Face Recognition Attendance">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Face Recognition Attendance">
           </div>
           <div class="project-content">
             <h3>Face Recognition Attendance System</h3>
-            <p>Python application using OpenCV for real-time face recognition to mark attendance automatically with high accuracy and security features.</p>
+            <p>University project using Python + OpenCV for real-time face recognition to mark attendance automatically with high accuracy and security features.</p>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">OpenCV</span>
               <span class="tag">Face Recognition</span>
-              <span class="tag">Flask</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Next Word Prediction">
+          </div>
+          <div class="project-content">
+            <h3>Next Word Prediction</h3>
+            <p>NLP model to predict next words in a sentence using advanced language modeling techniques for text completion and generation.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Language Model</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Checkers Game">
+          </div>
+          <div class="project-content">
+            <h3>Checkers Game</h3>
+            <p>C# GUI application with TCP-based client-server communication implementing a complete checkers game with multiplayer functionality.</p>
+            <div class="project-tags">
+              <span class="tag">C#</span>
+              <span class="tag">GUI</span>
+              <span class="tag">TCP</span>
+              <span class="tag">Networking</span>
             </div>
             <div class="project-links">
               <a href="#" class="project-link">
@@ -1221,43 +1381,10 @@
   <section class="skills section" id="skills">
     <div class="container">
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2>Skills & Expertise</h2>
       </div>
       <div class="skills-container">
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
-          <ul class="skill-list">
-            <li class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Deep Learning</span>
-                <span class="skill-percent">90%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
-            </li>
-            <li class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Computer Vision</span>
-                <span class="skill-percent">85%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-            </li>
-            <li class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Natural Language Processing</span>
-                <span class="skill-percent">80%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-            </li>
-            <li class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Generative AI</span>
-                <span class="skill-percent">75%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
-            </li>
-          </ul>
-        </div>
-        
+        <!-- Programming Languages -->
         <div class="skill-category fade-in">
           <h3><i class="fas fa-code"></i> Programming Languages</h3>
           <ul class="skill-list">
@@ -1271,20 +1398,27 @@
             <li class="skill-item">
               <div class="skill-info">
                 <span class="skill-name">Java</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
                 <span class="skill-percent">80%</span>
               </div>
               <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">JavaScript</span>
+                <span class="skill-name">C++ / C#</span>
                 <span class="skill-percent">75%</span>
               </div>
               <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">C++</span>
+                <span class="skill-name">PHP</span>
                 <span class="skill-percent">70%</span>
               </div>
               <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
@@ -1292,9 +1426,52 @@
           </ul>
         </div>
         
+        <!-- AI & ML Skills -->
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Computer Vision</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Natural Language Processing</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Deep Learning</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">RAG Systems</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Frameworks & Tools -->
         <div class="skill-category fade-in">
           <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
           <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React Native</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+            </li>
             <li class="skill-item">
               <div class="skill-info">
                 <span class="skill-name">TensorFlow/PyTorch</span>
@@ -1304,24 +1481,24 @@
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">React Native</span>
-                <span class="skill-percent">80%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-            </li>
-            <li class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">OpenCV</span>
+                <span class="skill-name">OpenCV / YOLO</span>
                 <span class="skill-percent">85%</span>
               </div>
               <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
             </li>
             <li class="skill-item">
               <div class="skill-info">
-                <span class="skill-name">Git & GitHub</span>
-                <span class="skill-percent">90%</span>
+                <span class="skill-name">Flask / Streamlit</span>
+                <span class="skill-percent">80%</span>
               </div>
-              <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+              <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">MySQL / SQLite</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
             </li>
           </ul>
         </div>
@@ -1336,12 +1513,14 @@
         <h2>Get In Touch</h2>
       </div>
       <p class="contact-desc">
-        I'm always open to discussing AI projects, creative ideas, or opportunities to be part of your vision.
-        Feel free to reach out if you want to collaborate or just say hello!
+        I'm actively seeking opportunities in AI Engineering, Machine Learning, and Software Development. Feel free to reach out for collaboration, job opportunities, or just to discuss AI and technology!
       </p>
       <div class="contact-links">
         <a href="mailto:mtouseeq20@gmail.com" class="contact-link">
           <i class="fas fa-envelope"></i> mtouseeq20@gmail.com
+        </a>
+        <a href="tel:+923301540904" class="contact-link">
+          <i class="fas fa-phone"></i> +92 330 1540904
         </a>
         <a href="https://linkedin.com/in/muhammad-touseeq-ai" target="_blank" class="contact-link">
           <i class="fab fa-linkedin"></i> LinkedIn
@@ -1356,14 +1535,15 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>AI Engineer | React Native Developer | Computer Vision & NLP Enthusiast</p>
+      <p>AI Engineer | React Native Developer | Computer Vision & NLP Specialist</p>
       <div class="footer-links">
         <a href="#home" class="footer-link">Home</a>
         <a href="#about" class="footer-link">About</a>
+        <a href="#journey" class="footer-link">Experience</a>
         <a href="#projects" class="footer-link">Projects</a>
         <a href="#contact" class="footer-link">Contact</a>
       </div>
-      <p class="copyright">© 2025 Muhammad Touseeq. All rights reserved.</p>
+      <p class="copyright">© 2025 Muhammad Touseeq. All rights reserved. | Rawalpindi, Pakistan</p>
     </div>
   </footer>
 
@@ -1375,7 +1555,7 @@
       "React Native Developer", 
       "Computer Vision Specialist",
       "NLP Expert",
-      "AI Researcher"
+      "Full-Stack Developer"
     ];
     
     let textIndex = 0;
@@ -1398,11 +1578,11 @@
       
       if (!isDeleting && charIndex === currentText.length) {
         isDeleting = true;
-        typingSpeed = 1000; // Pause at end
+        typingSpeed = 1000;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
-        typingSpeed = 500; // Pause before starting next text
+        typingSpeed = 500;
       }
       
       setTimeout(type, typingSpeed);
