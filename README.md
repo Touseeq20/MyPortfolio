@@ -22,11 +22,6 @@ This interactive portfolio highlights my **projects, skills, and experience** in
 
 ---
 
-## 📸 Portfolio Preview  
-👉[Preview](https://raw.githubusercontent.com/Touseeq20/Portfolio/main/profile.jpg)  
-
----
-
 ## 🎯 About Me  
 
 I'm **Muhammad Touseeq**, a passionate **AI Engineer** specializing in:  
