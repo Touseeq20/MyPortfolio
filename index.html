@@ -336,6 +336,14 @@
       border-radius: 2px;
     }
 
+    .contact-title-left {
+      text-align: left;
+    }
+
+    .contact-title-left:after {
+      margin: 10px 0 !important;
+    }
+
     /* About */
     .about {
       background: var(--dark-light);
@@ -423,33 +431,23 @@
 
     .about-image {
       position: relative;
-      height: 450px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .about-image:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      background: var(--gradient);
-      opacity: 0.1;
-      z-index: 1;
+      max-width: 550px;
+      margin-left: auto;
+      border-radius: 12px;
+      overflow: hidden;
     }
 
     .about-image img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      display: block;
+      border-radius: 12px;
       transition: transform 0.5s ease;
     }
 
     .about-image:hover img {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     /* Journey */
@@ -757,23 +755,38 @@
     /* Contact */
     .contact {
       background: var(--dark);
-      text-align: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .contact-content {
+      text-align: left;
     }
 
     .contact-desc {
-      max-width: 600px;
-      margin: 0 auto 2rem;
+      max-width: 100%;
+      margin: 0 0 3rem;
       color: var(--text-light);
       line-height: 1.8;
-      font-size: 1.1rem;
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 2.5rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
-      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+
+    .contact-animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .contact-link {
@@ -1092,9 +1105,47 @@
       }
 
       .about-image {
-        height: 300px;
+        height: auto;
+        max-width: 450px;
+        margin: 0 auto 2rem;
         order: -1;
-        /* Image first on mobile */
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+      }
+
+      .contact-content {
+        text-align: center !important;
+        padding-left: 0 !important;
+      }
+
+      .contact-content h3 {
+        font-size: 1.4rem !important;
+        max-width: 100% !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .contact-desc {
+        text-align: center !important;
+        max-width: 100% !important;
+        font-size: 1rem !important;
+      }
+
+      .contact-links {
+        justify-content: center !important;
+        margin-top: 2.5rem !important;
+      }
+
+      .contact-animation {
+        order: -1 !important;
+      }
+
+      .contact-animation dotlottie-wc {
+        width: 280px !important;
+        height: 280px !important;
       }
 
       /* Experience Timeline */
@@ -1349,6 +1400,86 @@
       -webkit-text-size-adjust: 100%;
     }
 
+    /* Tech Stack Section */
+    .tech-stack {
+      padding: 3rem 0;
+      background: var(--dark-light);
+      position: relative;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .tech-slider {
+      display: flex;
+      width: max-content;
+      animation: scroll 40s linear infinite;
+    }
+
+    .tech-slider:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .tech-pill {
+      background: rgba(99, 102, 241, 0.08);
+      color: #ffffff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-right: 2.2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .tech-pill:hover {
+      transform: translateY(-5px);
+      background: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .tech-icon-img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+    }
+
+    .tech-pill i {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: 768px) {
+      .tech-stack {
+        padding: 2rem 0;
+      }
+      .tech-pill {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+        margin-right: 1rem;
+      }
+      .tech-icon-img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
   </style>
 </head>
 
@@ -1409,8 +1540,129 @@
     </div>
   </section>
 
+  <!-- Tech Stack Section -->
+  <section class="tech-stack">
+    <div class="tech-slider">
+      <!-- Group 1 -->
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" class="tech-icon-img" alt="Laravel">
+        <span>Laravel</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-react" style="color: #61DAFB;"></i>
+        <span>React</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" class="tech-icon-img" alt="Next.js">
+        <span>Next.js</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-python" style="color: #3776AB;"></i>
+        <span>Python</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-node-js" style="color: #339933;"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg" class="tech-icon-img" alt="TensorFlow">
+        <span>TensorFlow</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-react" style="color: #61DAFB;"></i>
+        <span>React Native</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-github" style="color: #181717;"></i>
+        <span>GitHub</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-docker" style="color: #2496ED;"></i>
+        <span>Docker</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" class="tech-icon-img" alt="PostgreSQL">
+        <span>PostgreSQL</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="tech-icon-img" alt="FastAPI">
+        <span>FastAPI</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" class="tech-icon-img" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" class="tech-icon-img" alt="PyTorch">
+        <span>PyTorch</span>
+      </div>
+      
+      <!-- Duplicated for Infinite Scroll -->
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" class="tech-icon-img" alt="Laravel">
+        <span>Laravel</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-react" style="color: #61DAFB;"></i>
+        <span>React</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" class="tech-icon-img" alt="Next.js">
+        <span>Next.js</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-python" style="color: #3776AB;"></i>
+        <span>Python</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-node-js" style="color: #339933;"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg" class="tech-icon-img" alt="TensorFlow">
+        <span>TensorFlow</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-react" style="color: #61DAFB;"></i>
+        <span>React Native</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-github" style="color: #181717;"></i>
+        <span>GitHub</span>
+      </div>
+      <div class="tech-pill">
+        <i class="fab fa-docker" style="color: #2496ED;"></i>
+        <span>Docker</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" class="tech-icon-img" alt="PostgreSQL">
+        <span>PostgreSQL</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="tech-icon-img" alt="FastAPI">
+        <span>FastAPI</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" class="tech-icon-img" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+      <div class="tech-pill">
+        <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" class="tech-icon-img" alt="PyTorch">
+        <span>PyTorch</span>
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
-  <section class="about section" id="about">
+  <section class="about section" id="about" style="padding-top: 3rem;">
     <div class="container">
       <div class="section-title">
         <h2>About Me</h2>
@@ -1435,31 +1687,31 @@
             <p><i class="fas fa-map-marker-alt"></i>Rawalpindi/Islamabad, Pakistan</p>
             <p><i class="fas fa-envelope"></i> mtouseeq20@gmail.com</p>
             <p><i class="fas fa-phone"></i> +92 330 1540904</p>
-            <p><i class="fab fa-linkedin"></i> www.linkedin.com/in/muhammad-touseeq-ai</p>
-            <p><i class="fab fa-github"></i> https://github.com/Touseeq20</p>
-          </div>
-
-          <div class="about-stats">
-            <div class="stat">
-              <div class="stat-number">10+</div>
-              <div class="stat-text">Projects Completed</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">3</div>
-              <div class="stat-text">Professional Roles</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">15+</div>
-              <div class="stat-text">Technologies</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">5+</div>
-              <div class="stat-text">AI Models Deployed</div>
-            </div>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/muhammad-touseeq-ai" target="_blank" style="color:var(--text-light); text-decoration:none;">linkedin.com/in/muhammad-touseeq-ai</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/Touseeq20" target="_blank" style="color:var(--text-light); text-decoration:none;">github.com/Touseeq20</a></p>
           </div>
         </div>
         <div class="about-image fade-in">
           <img src="profile.jpg" alt="Muhammad Touseeq">
+        </div>
+      </div>
+
+      <div class="about-stats" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 4rem;">
+        <div class="stat">
+          <div class="stat-number" data-target="20">0</div>
+          <div class="stat-text">Projects Completed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-text">Professional Roles</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-text">Technologies</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-text">AI Models Deployed</div>
         </div>
       </div>
     </div>
@@ -2026,14 +2278,27 @@
   <!-- Contact Section -->
   <section class="contact section" id="contact">
     <div class="container">
-      <div class="section-title">
+    <div class="container">
+      <div class="section-title fade-in">
         <h2>Get In Touch</h2>
       </div>
-      <p class="contact-desc">
-        I'm actively seeking opportunities in AI Engineering, Machine Learning, and Software Development. Feel free to
-        reach out for collaboration, job opportunities, or just to discuss AI and technology!
-      </p>
-      <div class="contact-links">
+      <div class="contact-grid" style="max-width: 1300px; margin: 0 auto; grid-template-columns: 1.3fr 0.7fr; gap: 4rem; align-items: center;">
+        <div class="contact-content fade-in" style="text-align: left; padding-left: 7rem;">
+          <h3 style="color: var(--secondary); font-size: 1.7rem; margin-bottom: 1.5rem; font-weight: 600; line-height: 1.4; max-width: 800px;">
+            Collaborate with me on AI, ML & software projects
+          </h3>
+          <p class="contact-desc" style="text-align: left; margin: 0; font-size: 1.15rem; line-height: 1.8; max-width: 750px;">
+            I’m actively exploring opportunities in AI Engineering, Machine Learning, Software Development, and Freelance Projects.
+            I’m always open to collaborations, job opportunities, or freelance work, as well as meaningful discussions around AI,
+            technology, and innovation.          </p>
+        </div>
+        <div class="contact-animation fade-in">
+          <dotlottie-wc src="https://lottie.host/9d6d58aa-6b8d-42dc-a360-5de95f6715d0/rbJ7txdNSd.lottie" 
+            style="width: 380px; height: 380px" autoplay loop></dotlottie-wc>
+        </div>
+      </div>
+
+      <div class="contact-links fade-in">
         <a href="mailto:mtouseeq20@gmail.com" class="contact-link">
           <i class="fas fa-envelope"></i> mtouseeq20@gmail.com
         </a>
@@ -2259,6 +2524,41 @@
       });
     });
 
+    // Counter Animation
+    const statsSection = document.querySelector('.about-stats');
+    let animated = false;
+
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 1000; // 1 second
+        const stepTime = 20;
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.innerText = target + (target > 3 ? '+' : '');
+            clearInterval(timer);
+          } else {
+            counter.innerText = Math.floor(current);
+          }
+        }, stepTime);
+      });
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !animated) {
+        animateCounters();
+        animated = true;
+      }
+    }, { threshold: 0.5 });
+
+    if (statsSection) statsObserver.observe(statsSection);
+
     // Header scroll effect
     window.addEventListener('scroll', () => {
       const header = document.getElementById('header');
@@ -2269,6 +2569,7 @@
       }
     });
   </script>
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
 </body>
 
 </html>
